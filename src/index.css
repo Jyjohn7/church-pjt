@@ -1,0 +1,126 @@
+:root {
+    /* Colors */
+    --color-navy: #1B2A4A;
+    --color-navy-light: #2a3f6e;
+    --color-navy-dark: #0f1a30;
+    --color-gold: #C8A951;
+    --color-gold-light: #d4bc74;
+    --color-gold-dark: #a88a3a;
+    --color-white: #FFFFFF;
+    --color-light-gray: #F5F5F5;
+    --color-medium-gray: #E0E0E0;
+    --color-dark-gray: #666666;
+    --color-text: #333333;
+    --color-text-light: #888888;
+
+    /* Fonts */
+    --font-body: 'Noto Sans KR', sans-serif;
+    --font-heading-en: 'Playfair Display', serif;
+
+    /* Spacing */
+    --section-padding: 100px 0;
+    --container-width: 1200px;
+    --container-padding: 0 24px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    line-height: 1.7;
+    background-color: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header .en-title {
+    font-family: var(--font-heading-en);
+    font-size: 0.875rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 16px;
+}
+
+.section-header .divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-gold);
+    margin: 0 auto 20px;
+}
+
+.section-header p {
+    font-size: 1.05rem;
+    color: var(--color-dark-gray);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 60px 0;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+}

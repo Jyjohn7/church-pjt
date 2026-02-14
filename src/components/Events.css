@@ -1,0 +1,83 @@
+.events {
+    padding: var(--section-padding);
+    background: var(--color-white);
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.event-card {
+    padding: 30px;
+    background: var(--color-white);
+    border: 1px solid var(--color-medium-gray);
+    border-radius: 8px;
+    transition: all var(--transition-normal);
+}
+
+.event-card:hover {
+    border-color: var(--color-gold);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.event-category {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 20px;
+    background: var(--color-navy);
+    color: var(--color-white);
+    margin-bottom: 14px;
+}
+
+.event-category.notice {
+    background: var(--color-gold);
+    color: var(--color-navy-dark);
+}
+
+.event-category.education {
+    background: #4a90a4;
+    color: var(--color-white);
+}
+
+.event-card h3 {
+    font-size: 1.15rem;
+    color: var(--color-navy);
+    margin-bottom: 10px;
+}
+
+.event-description {
+    font-size: 0.93rem;
+    color: var(--color-dark-gray);
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.event-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-medium-gray);
+}
+
+.event-detail {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+.event-detail svg {
+    color: var(--color-gold-dark);
+}
+
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+}
