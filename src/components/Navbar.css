@@ -1,0 +1,99 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all var(--transition-normal);
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(27, 42, 74, 0.97);
+    padding: 12px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    color: var(--color-white);
+}
+
+.logo-main {
+    font-family: var(--font-heading-en);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-gold);
+}
+
+.logo-sub {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-link {
+    color: var(--color-white);
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.navbar-link:hover {
+    color: var(--color-gold);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggle {
+    display: none;
+    color: var(--color-white);
+    padding: 4px;
+}
+
+@media (max-width: 968px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--color-navy-dark);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 30px 30px;
+        gap: 4px;
+        transition: right var(--transition-normal);
+    }
+
+    .navbar-menu.active {
+        right: 0;
+    }
+
+    .navbar-link {
+        font-size: 1.05rem;
+        padding: 12px 16px;
+        width: 100%;
+    }
+}

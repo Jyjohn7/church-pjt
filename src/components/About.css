@@ -1,0 +1,108 @@
+.about {
+    padding: var(--section-padding);
+    background: var(--color-white);
+}
+
+.about-greeting {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.pastor-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gold);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.about-greeting-content h3 {
+    font-size: 1.5rem;
+    color: var(--color-navy);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+.about-greeting-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--color-gold);
+}
+
+.about-greeting-content p {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--color-dark-gray);
+    margin-bottom: 12px;
+}
+
+.pastor-name {
+    margin-top: 24px;
+    font-size: 1.05rem;
+    color: var(--color-navy);
+}
+
+.about-vision {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.vision-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: var(--color-light-gray);
+    border-radius: 8px;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.vision-icon {
+    color: var(--color-gold);
+    margin-bottom: 20px;
+}
+
+.vision-card h4 {
+    font-size: 1.2rem;
+    color: var(--color-navy);
+    margin-bottom: 14px;
+}
+
+.vision-card p {
+    font-size: 0.95rem;
+    color: var(--color-dark-gray);
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .about-greeting {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .pastor-placeholder {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .about-vision {
+        grid-template-columns: 1fr;
+    }
+}

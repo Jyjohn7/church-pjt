@@ -1,0 +1,66 @@
+.organization {
+    padding: var(--section-padding);
+    background: var(--color-white);
+}
+
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.org-card {
+    text-align: center;
+    padding: 36px 24px;
+    border: 1px solid var(--color-medium-gray);
+    border-radius: 8px;
+    transition: all var(--transition-normal);
+}
+
+.org-card:hover {
+    border-color: var(--color-gold);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-3px);
+}
+
+.org-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--color-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    color: var(--color-navy);
+    transition: all var(--transition-normal);
+}
+
+.org-card:hover .org-icon {
+    background: var(--color-navy);
+    color: var(--color-gold);
+}
+
+.org-card h3 {
+    font-size: 1.15rem;
+    color: var(--color-navy);
+    margin-bottom: 10px;
+}
+
+.org-card p {
+    font-size: 0.9rem;
+    color: var(--color-dark-gray);
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .org-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .org-grid {
+        grid-template-columns: 1fr;
+    }
+}
