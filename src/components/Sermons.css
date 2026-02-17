@@ -1,0 +1,104 @@
+.sermons {
+    padding: var(--section-padding);
+    background: var(--color-light-gray);
+}
+
+.sermons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.sermon-card {
+    background: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.sermon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.sermon-thumbnail {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sermon-play-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(200, 169, 81, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    transition: all var(--transition-normal);
+}
+
+.sermon-thumbnail:hover .sermon-play-btn {
+    background: var(--color-gold);
+    transform: scale(1.1);
+}
+
+.sermon-info {
+    padding: 24px;
+}
+
+.sermon-info h3 {
+    font-size: 1.1rem;
+    color: var(--color-navy);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.sermon-scripture {
+    font-size: 0.9rem;
+    color: var(--color-gold-dark);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.sermon-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+.sermons-more {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.sermons-more-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    border: 2px solid var(--color-navy);
+    color: var(--color-navy);
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all var(--transition-normal);
+}
+
+.sermons-more-btn:hover {
+    background: var(--color-navy);
+    color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+    .sermons-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
