@@ -67,7 +67,7 @@ function Contact() {
                         </div>
                         <div className="transport-item">
                             <span className="transport-badge bus">버스</span>
-                            <p>OOO, OOO, OOO번 버스 'OO정류장' 하차</p>
+                            <p>OOO, OOO, OOO번 버스 &lsquo;OO정류장&rsquo; 하차</p>
                         </div>
                         <div className="transport-item">
                             <span className="transport-badge car">자가용</span>

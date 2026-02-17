@@ -1,13 +1,37 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm create:*)",
-      "Bash(winget install:*)",
-      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
-      "Bash(node --version:*)",
-      "Bash(npm --version:*)",
-      "Bash(npm install:*)",
-      "Bash(npx vite build:*)"
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(npm create *)",
+      "Bash(npx *)",
+      "Bash(node *)",
+      "Bash(git status *)",
+      "Bash(git log *)",
+      "Bash(git diff *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git checkout *)",
+      "Bash(git merge *)",
+      "Bash(git stash *)",
+      "Bash(git remote *)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" *)",
+      "Bash(ls *)",
+      "Bash(where.exe *)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Bash(rm -rf *)",
+      "Bash(git push --force *)",
+      "Bash(git reset --hard *)",
+      "Bash(git clean -f *)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "notion"
+  ],
+  "enableAllProjectMcpServers": true
 }
